@@ -1,0 +1,9 @@
+# Difficulties
+Had a hard time with the translation of Assignment one into the RDD format
+Syntax was a bit of a challenge too
+The biggest challenge by far was the attempt to optimize it. At first it ran with the big dataset (although then I got a wrong value),
+but it took ~3 hours. Then I tried optimizing certain lines like the way it writes the output, also tweaking the configuration
+of Spark, so we have the necessary resource to run it, etc.
+
+# Regarding the implementation, there isnt anything specific I can say. In the code I have added comments that separate the parts
+and which part is for what. Maybe this can be added as the steps of implementation?

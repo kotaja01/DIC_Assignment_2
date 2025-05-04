@@ -1,0 +1,9 @@
+How to run Part 1 on cluster.
+1) Transfer the file "DIC_Assignment2_Part1.py" to "home/user". Make sure that the stopwords.txt file is also located in the same folder
+2) Open a terminal and navigate to the appropriate folder
+3) Use the following command in the terminal "spark-submit --master yarn --deploy-mode cluster --file stopwords.txt DIC_Assignment2_Part1.py"
+4) Once it is finished running, if it is successful you will see "final status: SUCCEEDED"
+5) To get the "output_rdd.txt" file, use the following commands:
+5.1) hadoop fs -ls output_rdd_final
+5.2) hadoop fs -get output_rdd_final/part-00000 output_rdd.txt
+6) With this, the "output_rdd.txt" file should be in the same folder as the python script and the stopword file
