@@ -1,4 +1,4 @@
-Result for the Gridsearch using a 10% subset:
+Result for the Gridsearch using a 10% subset with top 2000 features selector:
 
 Running: regParam=0.01, maxIter=100, standardization=True
 F1 Score: 0.4264021760260516
