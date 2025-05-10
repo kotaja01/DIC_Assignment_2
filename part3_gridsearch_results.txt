@@ -1,4 +1,4 @@
-Result for the Gridsearch using a 10% subset with top 2000 features selector:
+Result for the Gridsearch using a 10% subset with ChiSquare top 2000 features selector:
 
 Running: regParam=0.01, maxIter=100, standardization=True
 F1 Score: 0.4264021760260516
@@ -59,6 +59,64 @@ Running: regParam=1.0, maxIter=500, standardization=False
 F1 Score: 0.4221774307436656
 CPU times: user 2.98 s, sys: 1.59 s, total: 4.57 s
 Wall time: 4min 23s
+
+Result for the Gridsearch using a 10% subset with UnivariateFeatureSelector top 100 features selector:
+https://spark.apache.org/docs/latest/api/python/reference/api/pyspark.ml.feature.UnivariateFeatureSelector.html
+
+Running: regParam=0.01, maxIter=100, standardization=True
+F1 Score: 0.3257177070219622
+CPU times: user 4.06 s, sys: 2.51 s, total: 6.57 s
+Wall time: 8min 55s
+
+Running: regParam=0.01, maxIter=100, standardization=False
+F1 Score: 0.3169665811000437
+CPU times: user 4.09 s, sys: 2.61 s, total: 6.71 s
+Wall time: 9min 6s
+
+Running: regParam=0.01, maxIter=500, standardization=True
+F1 Score: 0.3027518014174029
+CPU times: user 4.23 s, sys: 2.84 s, total: 7.07 s
+Wall time: 9min 35s
+
+Running: regParam=0.01, maxIter=500, standardization=False
+F1 Score: 0.31678563919560876
+CPU times: user 4.89 s, sys: 2.89 s, total: 7.78 s
+Wall time: 11min 2s
+
+Running: regParam=0.1, maxIter=100, standardization=True
+F1 Score: 0.3194348976673801
+CPU times: user 4.05 s, sys: 2.41 s, total: 6.46 s
+Wall time: 7min 37s
+
+Running: regParam=0.1, maxIter=100, standardization=False
+F1 Score: 0.3124665727821254
+CPU times: user 4.49 s, sys: 2.54 s, total: 7.03 s
+Wall time: 10min 13s
+
+Running: regParam=0.1, maxIter=500, standardization=True
+F1 Score: 0.3296239866089004
+CPU times: user 5.49 s, sys: 3.39 s, total: 8.88 s
+Wall time: 14min 19s
+
+Running: regParam=0.1, maxIter=500, standardization=False
+F1 Score: 0.31305572755730904
+CPU times: user 4.5 s, sys: 2.33 s, total: 6.83 s
+Wall time: 10min 9s
+
+Running: regParam=1.0, maxIter=100, standardization=False
+F1 Score: 0.3114774862716787
+CPU times: user 3.64 s, sys: 1.93 s, total: 5.57 s
+Wall time: 6min 47s
+
+Running: regParam=1.0, maxIter=500, standardization=True
+F1 Score: 0.313343091064206
+CPU times: user 4.94 s, sys: 3.13 s, total: 8.07 s
+Wall time: 9min 48s
+
+Running: regParam=1.0, maxIter=500, standardization=False
+F1 Score: 0.32731900163102934
+CPU times: user 3.66 s, sys: 2.07 s, total: 5.74 s
+Wall time: 5min 12s
 
 Result for the devset on the best parameters:
 
