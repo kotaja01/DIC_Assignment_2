@@ -118,5 +118,10 @@ F1 Score: 0.32731900163102934
 CPU times: user 3.66 s, sys: 2.07 s, total: 5.74 s
 Wall time: 5min 12s
 
-Result for the devset on the best parameters:
+Result for the full devset on the best parameters:
+
+Running: regParam=0.1, maxIter=100, standardization=True
+F1 Score: 0.4380440450024001
+CPU times: user 3.56 s, sys: 1.85 s, total: 5.41 s
+Wall time: 4min 43s
 
