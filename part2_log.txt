@@ -1,0 +1,16 @@
+- the whole process was straightforward, no big problems occured
+- during implementation apache spark official documentation was very helpful
+- instructions from assignment description were followed - also quite helpful
+- the only interesting thing, for RegexTokenizer 'toLowercase' was set to False and custom casefolder was created
+- first, the proper understanding of individual components (casefolder, tokenizer, remover of stopwords, ...) was need
+- then, connecting of all components and creation of pipeline
+- pipeline was used on the development set and selected terms were extracted so we could compare output with output from assignment 1
+
+- wall time of fitting the pipeline was 62 seconds (it was executed on 9.5.2025 at 15:59)
+
+- comparison:
+
+Number of words in both files: 751
+Number of words only in file from assignment 1: 713
+Number of words only in file from assignment 2: 1249
+ 
