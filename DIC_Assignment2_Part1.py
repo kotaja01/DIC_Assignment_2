@@ -24,7 +24,7 @@ stopwords_file = "stopwords.txt"
 with open(stopwords_file, 'r') as f:
     stopwords = set([line.strip().lower() for line in f])
 
-# ---------- Tokenization ----------
+# ---------- Tokenization, stopword, and short word filtering ----------
 def preprocess(text):
     tokens = re.split(r"[ \t\d\(\)\[\]\{\}\.!?,;:+=\-_\"'`~#@&*%€$§\\/]+", text.lower())
     return [t for t in tokens if len(t) > 1 and t not in stopwords]
@@ -54,7 +54,7 @@ term_category_pairs = reviews.flatMap(
 
 A_counts = term_category_pairs.reduceByKey(lambda a, b: a + b)
 
-# Filter terms that only occur once (I am not sure if this is correct, but I tried reducing runtime a lot)
+# Filter terms that only occur once (this improved runtime and also produced an identical output as the code without it so it is not wrong)
 A_counts = A_counts.filter(lambda x: x[1] >= 2)
 
 # ---------- Frequencies of global terms ----------
@@ -107,7 +107,7 @@ category_lines = top_terms.map(
     )
 )
 
-# ---------- Dictionary ----------
+# ---------- Add the Dictionary ----------
 merged_dict = top_terms.flatMap(
     lambda x: [term for term, _ in x[1]]
 ).distinct()
